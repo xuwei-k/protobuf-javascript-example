@@ -1,0 +1,30 @@
+@(webJarAssets: controllers.WebJarAssets)
+
+<html>
+  <head>
+    <title>protobuf javascript example</title>
+    <script src='@routes.WebJarAssets.at(webJarAssets.locate("base.js"))'></script>
+    @for(x <- List("map", "message", "binary/constants", "binary/utils", "binary/arith", "binary/decoder", "binary/encoder", "binary/reader", "binary/writer")) {
+    <script src="http://rawgit.com/google/protobuf/v3.1.0/js/@{x}.js"></script>}
+    <script src="assets/javascripts/my-protobuf.js"></script>
+    <script>
+      const user = new proto.example.User();
+      user.setName("foo");
+      user.setId(42);
+      const age = new proto.google.protobuf.UInt32Value();
+      age.setValue(21);
+      user.setAge(age)
+      console.log(user);
+      const binary = user.serializeBinary();
+      console.log(binary);
+      const deserialized = proto.example.User.deserializeBinary(binary);
+      console.log(deserialized);
+      console.log(deserialized.getName() === "foo");
+      console.log(deserialized.getId() === 42);
+      console.log(deserialized.getAge().getValue() === 21);
+    </script>
+  </head>
+  <body>
+    <h1>protobuf javascript example</h1>
+  </body>
+</html>

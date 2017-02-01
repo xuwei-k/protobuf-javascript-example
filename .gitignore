@@ -1,0 +1,7 @@
+target
+.DS_Store
+*.class
+*.jar
+*.swp
+/logs
+/public/javascripts/my-protobuf.js

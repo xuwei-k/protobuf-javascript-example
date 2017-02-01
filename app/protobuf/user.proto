@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+package example;
+
+message User {
+  uint64 id = 1;
+  string name = 2;
+  google.protobuf.UInt32Value age = 3;
+}
