@@ -10,5 +10,5 @@ scalacOptions ++= (
 )
 
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.15")
-addSbtPlugin("com.thesamet" % "sbt-protoc" % "0.99.11")
-libraryDependencies += "com.trueaccord.scalapb" %% "compilerplugin" % "0.6.1"
+addSbtPlugin("com.thesamet" % "sbt-protoc" % "0.99.13")
+libraryDependencies += "com.thesamet.scalapb" %% "compilerplugin" % "0.7.0-rc6"

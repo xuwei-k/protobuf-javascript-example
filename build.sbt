@@ -1,4 +1,4 @@
-import com.trueaccord.scalapb.compiler.Version.scalapbVersion
+import scalapb.compiler.Version.scalapbVersion
 
 name := "protobuf-javascript-esample"
 
@@ -40,6 +40,6 @@ PB.protoSources in Compile += PB.externalIncludePath.value
 libraryDependencies ++= (
   ("org.webjars" %% "webjars-play" % "2.5.0-4") ::
   ("org.webjars" % "closure-library" % "20150412-848686a") ::
-  ("com.trueaccord.scalapb" %% "scalapb-runtime" % scalapbVersion % "protobuf") ::
+  ("com.thesamet.scalapb" %% "scalapb-runtime" % scalapbVersion % "protobuf") ::
   Nil
 )
