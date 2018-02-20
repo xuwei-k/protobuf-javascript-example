@@ -6,7 +6,7 @@ enablePlugins(PlayScala)
 
 scalaVersion := "2.11.12"
 
-licenses := Seq("MIT License" -> url("http://www.opensource.org/licenses/mit-license"))
+licenses := Seq("MIT License" -> url("https://www.opensource.org/licenses/mit-license"))
 
 scalacOptions ++= (
   "-deprecation" ::
