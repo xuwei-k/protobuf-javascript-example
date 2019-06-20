@@ -9,8 +9,4 @@ cache:
   - $HOME/.ivy2/cache
   - $HOME/.sbt/launchers
 jdk:
-- oraclejdk8
-addons:
-  apt:
-    packages:
-    - oracle-java8-installer
+- openjdk8
