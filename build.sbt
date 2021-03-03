@@ -18,8 +18,6 @@ scalacOptions ++= (
   Nil
 )
 
-ivyScala := ivyScala.value map { _.copy(overrideScalaVersion = true) }
-
 shellPrompt := { state =>
   val branch = if(file(".git").exists){
     "git branch".lines_!.find{_.head == '*'}.map{_.drop(1)}.getOrElse("")
