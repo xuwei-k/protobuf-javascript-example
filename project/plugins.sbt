@@ -1,7 +1,6 @@
 scalacOptions ++= (
   "-deprecation" ::
   "-unchecked" ::
-  "-Xlint" ::
   "-language:existentials" ::
   "-language:higherKinds" ::
   "-language:implicitConversions" ::
@@ -9,6 +8,6 @@ scalacOptions ++= (
   Nil
 )
 
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.18")
-addSbtPlugin("com.thesamet" % "sbt-protoc" % "0.99.17")
-libraryDependencies += "com.thesamet.scalapb" %% "compilerplugin" % "0.7.1"
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.8.7")
+addSbtPlugin("com.thesamet" % "sbt-protoc" % "1.0.1")
+libraryDependencies += "com.thesamet.scalapb" %% "compilerplugin" % "0.10.11"

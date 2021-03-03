@@ -4,14 +4,13 @@ name := "protobuf-javascript-esample"
 
 enablePlugins(PlayScala)
 
-scalaVersion := "2.11.12"
+scalaVersion := "2.13.5"
 
 licenses := Seq("MIT License" -> url("https://www.opensource.org/licenses/mit-license"))
 
 scalacOptions ++= (
   "-deprecation" ::
   "-unchecked" ::
-  "-Xlint" ::
   "-language:existentials" ::
   "-language:higherKinds" ::
   "-language:implicitConversions" ::
@@ -20,7 +19,7 @@ scalacOptions ++= (
 
 shellPrompt := { state =>
   val branch = if(file(".git").exists){
-    "git branch".lines_!.find{_.head == '*'}.map{_.drop(1)}.getOrElse("")
+    sys.process.Process("git branch").lineStream_!.find{_.head == '*'}.map{_.drop(1)}.getOrElse("")
   }else ""
   Project.extract(state).currentRef.project + branch + " > "
 }
@@ -35,9 +34,9 @@ PB.targets in Compile := Seq(
 
 PB.protoSources in Compile += PB.externalIncludePath.value
 
-libraryDependencies ++= (
-  ("org.webjars" %% "webjars-play" % "2.5.0-4") ::
-  ("org.webjars" % "closure-library" % "20150412-848686a") ::
-  ("com.thesamet.scalapb" %% "scalapb-runtime" % scalapbVersion % "protobuf") ::
-  Nil
+libraryDependencies ++= Seq(
+  guice,
+  "org.webjars" %% "webjars-play" % "2.8.0-1",
+  "org.webjars" % "closure-library" % "20150412-848686a",
+  "com.thesamet.scalapb" %% "scalapb-runtime" % scalapbVersion % "protobuf",
 )
