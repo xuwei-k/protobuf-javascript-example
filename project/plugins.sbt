@@ -11,4 +11,4 @@ scalacOptions ++= (
 addSbtPlugin("com.typesafe.sbt" % "sbt-twirl" % "1.5.1") // https://github.com/sbt/sbt/issues/6400
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.8.8")
 addSbtPlugin("com.thesamet" % "sbt-protoc" % "1.0.4")
-libraryDependencies += "com.thesamet.scalapb" %% "compilerplugin" % "0.11.5"
+libraryDependencies += "com.thesamet.scalapb" %% "compilerplugin" % "0.11.6"
