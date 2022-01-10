@@ -4,7 +4,7 @@ name := "protobuf-javascript-esample"
 
 enablePlugins(PlayScala)
 
-scalaVersion := "2.13.7"
+scalaVersion := "2.13.8"
 
 licenses := Seq("MIT License" -> url("https://www.opensource.org/licenses/mit-license"))
 
