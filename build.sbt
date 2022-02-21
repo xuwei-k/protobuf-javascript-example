@@ -36,7 +36,7 @@ PB.protoSources in Compile += PB.externalIncludePath.value
 
 libraryDependencies ++= Seq(
   guice,
-  "org.webjars" %% "webjars-play" % "2.8.8-1",
+  "org.webjars" %% "webjars-play" % "2.8.13",
   "org.webjars" % "closure-library" % "20150412-848686a",
   "com.thesamet.scalapb" %% "scalapb-runtime" % scalapbVersion % "protobuf",
 )
