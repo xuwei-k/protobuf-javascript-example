@@ -12,3 +12,4 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-twirl" % "1.5.1") // https://github.com/s
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.8.18")
 addSbtPlugin("com.thesamet" % "sbt-protoc" % "1.0.6")
 libraryDependencies += "com.thesamet.scalapb" %% "compilerplugin" % "0.11.12"
+libraryDependencySchemes += "org.scala-lang.modules" %% "scala-xml" % "always"
