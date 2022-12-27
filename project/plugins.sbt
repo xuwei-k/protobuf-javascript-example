@@ -8,7 +8,7 @@ scalacOptions ++= (
   Nil
 )
 
-addSbtPlugin("com.typesafe.sbt" % "sbt-twirl" % "1.5.1") // https://github.com/sbt/sbt/issues/6400
+addSbtPlugin("com.typesafe.play" % "sbt-twirl" % "1.5.2") // https://github.com/sbt/sbt/issues/6400
 addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.8.18")
 addSbtPlugin("com.thesamet" % "sbt-protoc" % "1.0.6")
 libraryDependencies += "com.thesamet.scalapb" %% "compilerplugin" % "0.11.12"
