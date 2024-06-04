@@ -10,5 +10,5 @@ scalacOptions ++= (
 
 addSbtPlugin("org.playframework" % "sbt-plugin" % "3.0.3")
 addSbtPlugin("com.thesamet" % "sbt-protoc" % "1.0.6")
-libraryDependencies += "com.thesamet.scalapb" %% "compilerplugin" % "0.11.15"
+libraryDependencies += "com.thesamet.scalapb" %% "compilerplugin" % "0.11.17"
 libraryDependencySchemes += "org.scala-lang.modules" %% "scala-xml" % "always"
